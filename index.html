@@ -1,12 +1,286 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raphaël Kouassi</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>Bonjour ! Ceci est une page de test</h1>
-    <p>Vous pouvez modifier ce contenu pour vos essais.</p>
+
+
+
+<!-- Smooth scroll -->
+<script src="js/scroll.js"></script>
+
+
+<!-- NAVIGATION -->
+<nav style="position: fixed; top:0; width:100%; padding:15px 0; z-index:2000; backdrop-filter: blur(6px);">
+  <ul style="display:flex; justify-content:center; gap:40px; list-style:none; margin:0; padding:0;">
+    <li><a href="#profil" style="color:#fff; text-decoration:none; font-weight:bold;">Profil</a></li>
+    <li><a href="#experiences" style="color:#fff; text-decoration:none; font-weight:bold;">Expériences</a></li>
+    <li><a href="#formation" style="color:#fff; text-decoration:none; font-weight:bold;">Formations</a></li>
+    <li><a href="#projets" style="color:#fff; text-decoration:none; font-weight:bold;">Projets</a></li>
+    <li><a href="#competences" style="color:#fff; text-decoration:none; font-weight:bold;">Compétences</a></li>
+    <li><a href="#contact" style="color:#fff; text-decoration:none; font-weight:bold;">Contact</a></li>
+  </ul>
+</nav>
+
+
+<section id="profil" style="padding:40px 20px; color:#fff; font-family:Roboto,sans-serif; position:relative; overflow:hidden; min-height:100vh; display:flex; flex-direction:column; align-items:center;">
+
+  <div style="
+  text-align:center; 
+  padding:30px 20px; 
+  background: linear-gradient(180deg, #0F2842 0%, #445769 100%);
+  border-radius:20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width:700px;
+  margin:0 auto;
+  margin-top:40px; /* réduit pour remonter la carte */
+  margin-bottom:160px; /* réduit pour rapprocher flèches */
+  ">
+  <img src="img/pp.png" alt="Photo de profil"
+  style="
+  width:150px; 
+  height:150px; 
+  border-radius:50%; 
+  border:3px solid #00e0ff; 
+  object-fit:cover; 
+  margin-bottom:20px;
+  box-shadow: 0 10px 20px rgba(0,224,255,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  "
+  onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 15px 30px rgba(0,224,255,0.5)';"
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 20px rgba(0,224,255,0.3)';"
+  >
+
+  <h1 style="
+  font-size:28px; 
+  font-weight:bold; 
+  margin-bottom:10px; 
+  color:#fff; 
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  ">Raphaël Kouassi</h1>
+
+<p style="
+font-size:18px; 
+color:#d0d0d0; 
+max-width:600px; 
+margin:0 auto; 
+line-height:1.6;
+">Développeur informatique</p>
+</div>
+
+<!-- Flèches SVG animées -->
+<div style="position:absolute; bottom:200px; display:flex; flex-direction:column; align-items:center; gap:12px;">
+  <svg class="chevron" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="5,5 20,15 35,5" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <svg class="chevron" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="5,5 20,15 35,5" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <svg class="chevron" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="5,5 20,15 35,5" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+</section>
+
+
+
+<!-- Expériences -->
+
+<section id="experiences">
+  <h1>Expériences professionnelles</h1>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>Mai - Juin 2024</h2>
+        <h3>Stage - Bureau d'étude Letmeknow Paris</h3>
+        <p>Développement informatique sur de l’embarqué (ESP32, Arduino, nodemcu). Réalisation de PCB et soudure de composants électronques.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>Avril 2023</h2>
+        <h3>Enseignement en cours particuliers</h3>
+        <p>Informatique / Electronique</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>Février 2020</h2>
+        <h3>Vente en boutique - Paris (75)</h3>
+        <p>Vente en ligne et en boutique de composants électronique et d'imprimantes 3D</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>Février 2019</h2>
+        <h3>Stage : Ministère de la Transition écologique et solidaire - service informatique (Paris)</h3>
+        <p>Configuration de matériels informatiques et maintenance de celui-ci</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="formation">
+  <h1>Formations</h1>
+  <div class="timeline">
+
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h2>2023 - 2025</h2>
+        <h3>BTS CIEL - Arpajon (91)</h3>
+        <p>Cybersécurité, Informatique et Réseaux,<br>électronique <br>Option A : Informatique et Réseaux
+          <br><a class="lienRuche" href="ruche.html"> Projet d’étude : Surveillance à distance de ruches</a></p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h2>2022 - 2023</h2>
+          <h3>BUT GEII - Cachan (94)</h3>
+          <p>(Génie Electrique et Informatique Industrielle)</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h2>2022</h2>
+          <h3>Baccalauréat STI2D - Arpajon (91)</h3>
+          <p>(Sciences et technologies de l'industrie et du développement durable) Spécialité (SIN) : Système d'Information et Numérique</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+<!-- Portfolio -->
+<section id="projets">
+  <h1 style="text-align:center; margin: 20px 0;">Portfolio</h1>
+
+  <div class="carousel">
+    <div class="slides">
+      <a href="ruche.html"><img src="img/projets/ruche/ruche_2.png" alt="Projet Rucher"></a>
+      <a href="led.html"><img src="img/projets/led/led.png" alt="Projet 2"></a>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<script src="js/portfolio.js"></script>
+
+
+
+
+
+<!-- Compétences -->
+<section id="competences" class="full-section">
+  <h1>Compétences</h1>
+  <div class="competence-grid">
+
+
+    <div class="competence-card prog">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Langages de programmation</h2>
+        <p>C, C++, Arduino</p>
+      </div>
+    </div>
+
+    <div class="competence-card embarque">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Systèmes embarqués</h2>
+        <p>Électronique, Conception de PCB</p>
+      </div>
+    </div>
+
+    <div class="competence-card web">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Développement web</h2>
+        <p>HTML, CSS, JS, SQL, PHP</p>
+      </div>
+    </div>
+
+    <div class="competence-card bdd">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Base de données</h2>
+        <p>MySQL, Laragon</p>
+      </div>
+    </div>
+
+    <div class="competence-card rpi">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Raspberry Pi</h2>
+        <p>Linux, BDD, Python</p>
+      </div>
+    </div>
+
+    <div class="competence-card teamwork">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Conception de projet / Travail en équipe</h2>
+      </div>
+    </div>
+
+        <div class="competence-card langues">
+      <div class="bg-image"></div>
+      <div class="overlay">
+        <h2>Langues parlées</h2>
+        <h2>Français / Anglais</h2>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<footer id="contact">
+  <h1>Contact</h1>
+
+  <div class="contact-buttons">
+
+    <button id="linkedin-button" onclick="window.open('https://www.linkedin.com/in/raphael-kouassi', '_blank')">
+      <img src="img/linkedin.png" alt="LinkedIn" />
+      <span>LinkedIn</span>
+    </button>
+    <button id="email-button">
+      <img src="img/mail.png" alt="Mail" />
+      <span>raphael.kouassikr@gmail.com</span>
+      <script>
+        document.getElementById('email-button').addEventListener('click', function () {
+          const email = "raphael.kouassikr@gmail.com";
+          navigator.clipboard.writeText(email).then(() => {
+            alert("Adresse mail copié dans le presse-papiers");
+          });
+        });
+      </script>
+    </button>
+  </div>
+</footer>
+
+
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet éclairage d'ambiance</title>
+  <link rel="stylesheet" href="css/led.css" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- Smooth scroll -->
+  <script src="js/scroll.js"></script>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Raphaël Kouassi</a></li>
+      <li><a href="ruche.html">Ruche</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h1>Système d'éclairage d'ambiance</h1>
+      <h2>Mise en situation</h2>
+      <p>
+        De 2023 à 2024, j’ai conduit en totale autonomie un projet commercial complet, couvrant toutes les étapes : conception, développement et commercialisation en ligne. Ce travail a abouti à la création d’un éclairage LED d’ambiance innovant, offrant la possibilité de diffuser plusieurs couleurs.
+      </p>
+      <img src="img/projets/led/img_1.jpg" class="illustration" alt="Illustration du projet Ruche">
+    </section>
+
+    <section id="specifications">
+      <h2>Cahier des charges</h2>
+      <p>
+        Le système a été conçu pour être compact, léger et facilement transportable. Son utilisation intuitive permet de s’adresser à tous types de publics et de s’adapter à de multiples usages.
+        Techniquement, l’ensemble du dispositif repose sur un PCB intégrant 7 LEDs de puissance, un microcontrôleur, un câble d’alimentation ainsi qu’un bouton-poussoir permettant de sélectionner la couleur. Le tout est encapsulé dans un boîtier spécialement conçu et développé pour ce produit.
+      </p>
+    </section>
+
+
+
+
+    <section id="tech">
+      <h2>Partie technique</h2>
+      <p>Pour des raisons de confidentialité toutes les informations techniques (références des composants, schéma électronique etc...) ne seront pas publiques.</p>
+
+      <h3>Partie électronique</h3>
+      <img src="img/projets/led/pcb.png" class="illustration" alt="Schéma électronique ruche">
+      <p>
+        Pour mettre en œuvre ce projet, j’ai intégré 7 LEDs de puissance, reliées à un microcontrôleur qui reçoit les signaux du bouton-poussoir permettant de changer la couleur. L’ensemble du système est alimenté par un câble USB-A.
+
+        Pour la conception du PCB, j’ai utilisé le logiciel de CAO EasyEDA. J’ai d’abord réalisé le schéma électrique, puis le schéma électronique. Une fois la conception terminée, j’ai envoyé le PCB en production via les services de JLCPCB.
+
+      </p>
+      <h3>Assemblage électronique des composants électronique</h3>
+      <p>L’assemblage du microcontrôleur, du bouton-poussoir et du câble a été réalisé à l’aide d’un fer à souder classique. Pour les LEDs de puissance, j’ai utilisé une soudure à l’air chaud, plus adaptée à ce type de composants (composants de surface).
+      </p>
+
+
+
+
+      <h3>Extrait de code de la barre LED</h3>
+
+
+      <pre><code class="language-javascript">
+       etatBP = digitalRead(BP);
+
+       if(etatBP == LOW)
+       {
+        etat++;
+        if(etat > 10)
+        {
+          etat = 1;
+        }
+        delay(250);
+      }
+
+    </code></pre>
+
+    <h3>Explication du code</h3>
+    <p>Le microcontrôleur lit l’état du bouton-poussoir. À chaque appui, la variable etat est incrémentée pour passer à la couleur suivante. Lorsque la dernière couleur est atteinte, le système recommence le cycle depuis la première couleur. Un court délai est intégré pour éviter que plusieurs changements se produisent à la suite d’un même appui.</p>
+
+
+
+    <h3>Pièces 3D</h3>
+    <p>Le système est composé de 3 pièces 3D. La première est le boîtier principal acceuillant le PCB, le second est le cache arrière aillant pour fonction de fermer le produitet le dernier est le support pour le bouton poussoir. L’ensemble des éléments 3D a été conçu avec le logiciel de CAO FreeCAD. Les pièces ont ensuite été tranchées dans Cura avant d’être imprimées en 3D à l’aide de l’imprimante Créality Ender-3.</p>
+
+
+  </head>
+  <body>
+    <div class="player-wrap" id="player">
+
+
+<video id="video" playsinline autoplay muted loop preload="auto" tabindex="-1">
+  <source src="annimation/annimation.mp4" type="video/mp4">
+</video>
+<div class="blocker" id="blocker" aria-hidden="true"></div>
+<div class="sr-only" aria-live="polite">Vidéo en lecture automatique, sans contrôles.</div>
+</div>
+
+<script src="js/annimation.js"></script>
+
+
+</section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Projet Système d'éclairage d'ambiance – Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
